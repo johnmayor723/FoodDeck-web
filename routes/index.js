@@ -9,10 +9,10 @@ const API_URL = "https://pantry-hub-server.onrender.com/api/products";
 router.get("/", async (req, res) => {
   // Dummy category array
   const categories = [
-    { id: 1, name: 'Dairy', image: '/img/categories/dairy.jpg' },
-    { id: 2, name: 'Meat', image: '/img/categories/meat.jpg' },
-    { id: 3, name: 'Vegetables', image: '/img/categories/vegetables.jpg' },
-    { id: 4, name: 'Oil Products', image: '/img/categories/oil.jpg' },
+    { id: 1, name: 'Dairy', image: '/images/dairy.jpg' },
+    { id: 2, name: 'Meat', image: '/images/Meat.jpeg' },
+    { id: 3, name: 'Vegetables', image: '/img/catgories/vegetables.jpg' },
+    { id: 4, name: 'Oil Products', image: '/img/Oil.jpeg' },
     { id: 5, name: 'Flour & Meal', image: '/img/categories/flour.jpg' },
     { id: 6, name: 'Condiments', image: '/img/categories/condiments.jpg' },
     { id: 7, name: 'Ingredients', image: '/img/categories/ingredients.jpg' },
