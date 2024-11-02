@@ -1,0 +1,57 @@
+<!-- Hero Section -->
+<section class="jumbotron text-center" style="background-image: url('/img/hero.jpeg'); background-size: cover; color: white;">
+  <div class="container">
+    <h1 class="jumbotron-heading">Welcome to FoodDeck</h1>
+    <p class="lead text-light">Explore our wide variety of food categories and enjoy shopping.</p>
+    <a href="/shop" class="btn btn-primary my-2">Shop Now</a>
+  </div>
+</section>
+
+<!-- Category Section -->
+<section class="container my-5">
+  <h2 class="text-center">Categories</h2>
+  <div class="row">
+    <% categories.forEach(function(category) { %>
+      <div class="col-lg-2 col-md-3 col-6 mb-4">
+        <div class="card"><a href = "<%= category.name %>">
+          <img src="<%= category.image %>" class="card-img-top" alt="<%= category.name %>">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= category.name %></h5>
+            
+          </div>
+          </a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="container my-5">
+  <h2 class="text-center">Featured Products</h2>
+  <div class="row">
+    <% products.forEach(function(product, index) { %>
+      <div class="col-lg-3 col-md-4 col-6 mb-4">
+       <a href = "<%= products._id %>"> 
+       <div class="card">
+          <img src="<%= product.imageUrl %>" class="card-img-top" alt="<%= product.name %>">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text">$<%= product.price %></p>
+            <div class="d-flex justify-content-between">
+          
+              <form action="/cart/add" method="POST" class="d-inline">
+                <input type="hidden" name="productId" value="<%= product.id %>">
+                <button type="submit" class="btn btn-success add-to-cart-btn">Add to Cart</button>
+              </form>
+            </div>
+          </div>
+        </div>
+       </a>
+      </div>
+      <% if ((index + 1) % 2 === 0 && index < products.length - 1) { %>
+        <div class="w-100 d-block d-md-none"></div>
+      <% } %>
+    <% }) %>
+  </div>
+</section>
