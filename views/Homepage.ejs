@@ -275,7 +275,7 @@
                                 <img src="<%= product.imageUrl %>" class="img-fluid rounded-circle w-100" alt="<%= product.name %>">
                             </div>
                             <div class="col-6">
-                                <a href="#" class="h5"><%= product.name %></a>
+                                <a href="/products/:<%=product.product_id%>" class="h5"><%= product.name %></a>
                                 <div class="d-flex my-3">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
@@ -283,7 +283,7 @@
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <h4 class="mb-3"><%= product.price %> &#8358;</h4>
+                                <h4 class="mb-3"> ₦<%= product.price %> &#8358;</h4>
                         
                                 <a href="/products/<%= product._id %>" class="btn border border-secondary rounded-pill px-3 text-primary">
                                     <i style="color:white" class="fa fa-shopping-bag me-2 text-primary"></i> view detais
